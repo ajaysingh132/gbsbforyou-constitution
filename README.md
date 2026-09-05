@@ -1,35 +1,28 @@
-# GBSBFORYOU Outreach OS v1.0
+# GBSB4U Digital Parliament UI
+## Community Governance UI Package v1.0
 
-Permanent parliamentary, government, media and community outreach system.
+This package implements the approved community governance UI model:
 
-## Identity
-Presented by: GBSBFORYOU Multiple Platform
-Direction & responsibility: Founder — Ajay Singh Chouhan
-Basis: public-interest citizen communication.
+General Members -> Circle -> Local Governance Team -> District Representation -> Main Governance Team -> Team Leader
 
-This wording does not claim to legally represent all citizens or the entire Banjara community.
+This is a frontend foundation. It does not invent live membership, election results, roles, or governance authority.
 
-## GitHub Pages
-`index.html` is the public/mobile frontend.
+### Important
+- Do not place Supabase service-role or secret keys in frontend files.
+- The existing publishable Supabase key may be configured separately.
+- Backend tables/RLS must be finalized before enabling live mutations.
+- Roles and elected positions must be assigned by the governed backend, never by a login dropdown.
+- AI remains assistive and cannot make governance decisions.
 
-## Private backend
-`Code.gs` is intended for a Google Sheet Apps Script deployment. Do NOT publish private contact databases, OAuth credentials, API keys or Gmail tokens in this repository.
+### Pages
+- index.html
+- dashboard.html
+- circles.html
+- representatives.html
+- governance.html
+- meetings.html
+- elections.html
+- login.html
 
-## Workflow
-Contact Master → Letter → Campaign → Human Review → Gmail Delivery → Delivery Log → Response/Follow-up.
-
-## Contact groups
-Government, Parliament, Lok Sabha MP, Rajya Sabha MP, Media, Community, Other.
-
-## Fixed hashtags
-#GorBoli #Banjara #FCRA #Sansad #Parliament #Loktantra #AapniGorBoli #BLE
-
-## Deployment
-1. Replace the repository's `index.html` with this version.
-2. Commit to `main`.
-3. GitHub Pages will publish it.
-4. For Gmail: create a private Google Sheet, paste `Code.gs` into Apps Script, deploy as Web App, authorize Gmail/Sheets, and keep the Web App access restricted as far as your account/workflow permits.
-5. Paste the Web App URL into Settings in the frontend.
-6. Test connection before any real delivery.
-
-The backend sample limits one request to 10 recipients. Test first and comply with applicable Gmail/Workspace sending and anti-spam rules.
+### Deployment
+Upload the contents of this package to the `GBSB4U/digital-parliament-ui` repository, preserving the directory structure.
